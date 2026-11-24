@@ -144,6 +144,47 @@ router.patch('/users/:id/role', async (req, res) => {
 });
 
 /**
+ * DELETE /api/admin/users/:id
+ * Remove a user account from FixMate
+ * Rule: Admin cannot delete their own account
+ */
+router.delete('/users/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { usersCollection } = getCollections();
+    const query = buildIdQuery(id);
+    const targetUser = await usersCollection.findOne(query);
+
+    if (!targetUser) {
+      return res.status(404).json({
+        success: false,
+        message: 'User account not found.',
+      });
+    }
+
+    if (targetUser.email === req.user.email) {
+      return res.status(400).json({
+        success: false,
+        message: 'Security policy violation: Administrators cannot delete their own account.',
+      });
+    }
+
+    await usersCollection.deleteOne(query);
+
+    return res.status(200).json({
+      success: true,
+      message: `User ${targetUser.name} (${targetUser.email}) removed successfully.`,
+    });
+  } catch (error) {
+    console.error('Error in DELETE /api/admin/users/:id:', error);
+    return res.status(500).json({
+      success: false,
+      message: 'Failed to remove user account.',
+    });
+  }
+});
+
+/**
  * GET /api/admin/services
  * Manage Services with filter by approvalStatus
  */
