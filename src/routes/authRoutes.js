@@ -84,10 +84,6 @@ router.post('/register', async (req, res) => {
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(password, salt);
 
-    const defaultAvatar = assignedRole === 'technician'
-      ? 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=200&auto=format&fit=crop'
-      : 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&auto=format&fit=crop';
-
     const newUser = {
       name: name.trim(),
       email: normalizedEmail,
@@ -96,7 +92,7 @@ router.post('/register', async (req, res) => {
       phone: phone || '',
       area: area || '',
       bio: bio || '',
-      image: image || defaultAvatar,
+      image: image || '',
       createdAt: new Date(),
     };
 

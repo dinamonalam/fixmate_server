@@ -17,7 +17,7 @@ async function getSeedData() {
       phone: '+880 1711 000111',
       area: 'Banani, Dhaka',
       bio: 'FixMate Principal Operations & Compliance Administrator.',
-      image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop',
+      image: '',
       createdAt: new Date('2026-01-01'),
     },
     {
@@ -29,7 +29,7 @@ async function getSeedData() {
       phone: '+880 1819 223344',
       area: 'Dhanmondi, Dhaka',
       bio: 'Level-3 Certified Hardware Specialist with 8+ years expertise in Smartphone displays, MacBook logic boards, and micro-soldering.',
-      image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=300&auto=format&fit=crop',
+      image: '',
       createdAt: new Date('2026-01-10'),
     },
     {
@@ -41,7 +41,7 @@ async function getSeedData() {
       phone: '+880 1912 334455',
       area: 'Gulshan & Banani, Dhaka',
       bio: 'HVAC & Master Home Appliance Engineer specializing in Inverter AC servicing, Refrigerator cooling loops, and Smart Washers.',
-      image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=300&auto=format&fit=crop',
+      image: '',
       createdAt: new Date('2026-01-12'),
     },
     {
@@ -53,7 +53,7 @@ async function getSeedData() {
       phone: '+880 1515 998877',
       area: 'Mirpur 10, Dhaka',
       bio: 'Software engineer and avid tech enthusiast.',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop',
+      image: '',
       createdAt: new Date('2026-01-15'),
     },
     {
@@ -65,7 +65,7 @@ async function getSeedData() {
       phone: '+880 1616 443322',
       area: 'Sector 4, Uttara, Dhaka',
       bio: 'Homeowner seeking reliable smart appliance servicing.',
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&auto=format&fit=crop',
+      image: '',
       createdAt: new Date('2026-01-16'),
     },
   ];
