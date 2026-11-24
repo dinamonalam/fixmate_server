@@ -1,5 +1,14 @@
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const { getSeedData } = require('../scripts/seedData');
+const dns = require('dns');
+
+// On Windows / certain ISPs, Node.js querySrv fails on MongoDB SRV records unless Google DNS is set
+try {
+  dns.setServers(['8.8.8.8', '8.8.4.4']);
+} catch (e) {
+  // ignore in restricted environments
+}
+
 require('dotenv').config();
 
 const uri = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/fixmate';
