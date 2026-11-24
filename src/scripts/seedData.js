@@ -156,7 +156,7 @@ async function getSeedData() {
       title: 'Inverter AC Circuit PCB Board Repair & Diagnostics',
       category: 'AC',
       description: 'Troubleshooting AC error codes, replacing blown varistors, transistors, and inverter communication microcontrollers.',
-      image: 'https://images.unsplash.com/photo-1581092335397-9583fe92d232?w=600&auto=format&fit=crop',
+      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&auto=format&fit=crop',
       basePrice: 60,
       estimatedDuration: '1 day',
       serviceMode: 'Home Visit',
