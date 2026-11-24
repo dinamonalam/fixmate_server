@@ -38,10 +38,10 @@ router.post('/', verifyToken, verifyCustomer, async (req, res) => {
       });
     }
 
-    if (problemDescription.trim().length < 20) {
+    if (problemDescription.trim().length < 5) {
       return res.status(400).json({
         success: false,
-        message: 'Problem description must be at least 20 characters long.',
+        message: 'Problem description must be at least 5 characters long.',
       });
     }
 
