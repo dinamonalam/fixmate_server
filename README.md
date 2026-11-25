@@ -8,9 +8,10 @@ Provides secure, role-based APIs for customers, technicians and admins, with a s
 ## Live URL
 https://fixmate-server-b1lq.onrender.com/
 
-## Admin Credentials
-- **Email:** admin@fixmate.com
-- **Password:** Admin@123
+## Test Credentials (for Examiner Quick Testing)
+- **Admin:** `admin@fixmate.com` / `Admin@123`
+- **Technician:** `tech.rahim@fixmate.com` / `Tech@123` (8 approved services, active & completed requests)
+- **Customer:** `customer.arman@fixmate.com` / `Customer@123` (active requests & completed bookings with Pay Now)
 
 ## Key Features
 - 4 MongoDB collections: `users`, `services`, `bookings`, `payments`
